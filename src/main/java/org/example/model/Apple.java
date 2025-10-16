@@ -1,7 +1,7 @@
 package org.example.model;
 
 import org.example.model.constants.Colour;
-import org.example.model.constants.Discount;
+import org.example.model.constants.VegetarianDiscount;
 
 public class Apple extends Food implements Discountable {
 
@@ -19,7 +19,7 @@ public class Apple extends Food implements Discountable {
     @Override
     public double getDiscount() {
         if (Colour.RED.equalsIgnoreCase(colour)) {
-            return Discount.SIXTY; // 60%
+            return VegetarianDiscount.PERCENT; // 60%
         }
         return 0.0;
     }
